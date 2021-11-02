@@ -39,3 +39,9 @@ capacity :: [100=>100], keepAliveTime :: [10000=>10000], rejectedType :: [7=>7]
 <br/>
 
 现阶段已集成钉钉消息推送，后续会持续接入企业微信、邮箱、飞书、短信等通知渠道。可以通过添加钉钉群体验消息推送，群号：31764717
+
+
+<figure class="half">
+    <img src="https://images-machen.oss-cn-beijing.aliyuncs.com/image-20211013122816688.png" width="350"/>
+    <img src="https://images-machen.oss-cn-beijing.aliyuncs.com/image-20211013113649068.png" width="350"/>
+</figure>

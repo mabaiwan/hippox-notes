@@ -17,11 +17,11 @@ export default {
         text: '文档',
         link: '/zh-cn/docs/start/什么是Hippo.html',
       },
-      // {
-      //   key: 'blog',
-      //   text: '博客',
-      //   link: '/zh-cn/blog/index.html',
-      // },
+      {
+        key: 'blog',
+        text: '博客',
+        link: '/zh-cn/blog/index.html',
+      },
       // {
       //   key: 'community',
       //   text: '社区',
@@ -76,11 +76,11 @@ export default {
         text: '文档',
         link: '/zh-cn/docs/start/什么是Hippo.html',
       },
-      // {
-      //   key: 'blog',
-      //   text: '博客',
-      //   link: '/zh-cn/blog/index.html',
-      // },
+      {
+        key: 'blog',
+        text: '博客',
+        link: '/zh-cn/blog/index.html',
+      },
       // {
       //   key: 'community',
       //   text: '社区',
@@ -113,12 +113,8 @@ export default {
       list: [
         {
           text: '博客',
-          link: '-',
-        },
-        {
-          text: '社区',
-          link: '-',
-        },
+          link: '/zh-cn/blog/index.html',
+        }
       ],
     },
     copyright: 'Copyright © 2021 Someone. All rights reserved.',

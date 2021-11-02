@@ -4,7 +4,7 @@ export default {
   'zh-cn': {
     brand: {
       brandName: 'HippoX 动态线程池',
-      briefIntroduction: '强大的动态线程池，并附带监控报警功能（没有依赖中间件）',
+      briefIntroduction: '强大的动态线程池，并附带监控报警功能，没有依赖中间件。',
       buttons: [
         {
           text: '前往Github',
@@ -67,7 +67,7 @@ export default {
   'en-us': {
     brand: {
       brandName: 'HippoX 动态线程池',
-      briefIntroduction: '强大的动态线程池，并附带监控报警功能（没有依赖中间件）',
+      briefIntroduction: '强大的动态线程池，并附带监控报警功能，没有依赖中间件。',
       buttons: [
         {
           text: '前往Github',
