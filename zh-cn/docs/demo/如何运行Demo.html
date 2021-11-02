@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="如何运行Demo" />
+	<meta name="description" content="如何运行Demo" />
+	<!-- 网页标签标题 -->
+	<title>如何运行Demo</title>
+	<link rel="shortcut icon" href="//img/docsite.ico"/>
+	<link rel="stylesheet" href="//build/documentation.css" />
+</head>
+<body>
+	<div id="root"><div class="documentation-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="//zh-cn/index.html"><img class="logo" src="//img/dubbo_colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="//img/system/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="//zh-cn/index.html" target="_self">首页</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="//zh-cn/docs/start/什么是Hippo.html" target="_self">文档</a></li><li class="menu-item menu-item-normal"><a href="//zh-cn/blog/index.html" target="_self">博客</a></li><li class="menu-item menu-item-normal"><a href="//zh-cn/community/index.html" target="_self">社区</a></li></ul></div></div></header><div class="bar"><div class="bar-body"><img src="//img/system/docs.png" class="front-img"/><span>HippoX</span><img src="//img/system/docs.png" class="back-img"/></div></div><section class="content-section"><div class="sidemenu"><div class="sidemenu-toggle"><img src="https://img.alicdn.com/tfs/TB1E6apXHGYBuNjy0FoXXciBFXa-200-200.png"/></div><ul><li class="menu-item menu-item-level-1"><span>hippoX</span><ul><li style="height:108px;overflow:hidden" class="menu-item menu-item-level-2"><span>Hippo是什么？<img style="transform:rotate(0deg)" class="menu-toggle" src="//img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="//zh-cn/docs/start/什么是Hippo.html" target="_self">简介</a></li><li class="menu-item menu-item-level-3"><a href="//zh-cn/docs/start/Hippo架构.html" target="_self">架构</a></li></ul></li><li style="height:72px;overflow:hidden" class="menu-item menu-item-level-2"><span>快速开始<img style="transform:rotate(0deg)" class="menu-toggle" src="//img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="//zh-cn/docs/demo/如何运行Demo.html" target="_self">如何运行 Demo</a></li></ul></li></ul></li></ul></div><div class="doc-content markdown-body"><h2 id="%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C-demo%EF%BC%9F">如何运行 Demo？ <a class="header-anchor" href="#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C-demo%EF%BC%9F">#</a></h2>
+<p>目前动态线程池功能已经完成，可以直接把代码拉到本地运行。导入 <a href="https://github.com/acmenlt/dynamic-threadpool/blob/develop/server/src/main/resources/hippo_manager.sql">Hippo 初始化 SQL 语句</a></p>
+<ol>
+<li>启动 <code>dynamic-threadpool-server</code> 模块下 ServerApplication 应用类</li>
+<li>启动 <code>dynamic-threadpool-example</code> 模块下 ExampleApplication 应用类</li>
+</ol>
+<br/>
+<p>通过接口修改线程池中的配置。HTTP POST 路径：<a href="http://localhost:6691/v1/cs/configs">http://localhost:6691/v1/cs/configs</a> ，Body 请求体如下：</p>
+<pre><code class="language-json">{
+    <span class="hljs-attr">"ignore"</span>: <span class="hljs-string">"tenantId、itemId、tpId 代表唯一线程池，请不要修改"</span>,
+    <span class="hljs-attr">"tenantId"</span>: <span class="hljs-string">"prescription"</span>,
+    <span class="hljs-attr">"itemId"</span>: <span class="hljs-string">"dynamic-threadpool-example"</span>,
+    <span class="hljs-attr">"tpId"</span>: <span class="hljs-string">"message-produce"</span>,
+    <span class="hljs-attr">"coreSize"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"maxSize"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-attr">"queueType"</span>: <span class="hljs-number">9</span>,
+    <span class="hljs-attr">"capacity"</span>: <span class="hljs-number">100</span>,
+    <span class="hljs-attr">"keepAliveTime"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"rejectedType"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"isAlarm"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"capacityAlarm"</span>: <span class="hljs-number">81</span>,
+    <span class="hljs-attr">"livenessAlarm"</span>: <span class="hljs-number">82</span>
+}
+</code></pre>
+<br/>
+<p>接口调用成功后，观察 dynamic-threadpool-example 控制台日志输出，日志输出包括不限于此信息即为成功</p>
+<pre><code class="language-tex">[🔥 MESSAGE-PRODUCE] Changed thread pool. coreSize :: [11=&gt;10], maxSize :: [15=&gt;15], queueType :: [9=&gt;9]
+capacity :: [100=&gt;100], keepAliveTime :: [10000=&gt;10000], rejectedType :: [7=&gt;7]
+</code></pre>
+<br/>
+<p>现阶段已集成钉钉消息推送，后续会持续接入企业微信、邮箱、飞书、短信等通知渠道。可以通过添加钉钉群体验消息推送，群号：31764717</p>
+</div></section><footer class="footer-container"><div class="footer-body"><img src="//img/dubbo_gray.png"/><div class="cols-container"><div class="col col-12"><h3>免责声明</h3><p>免责声明的具体内容</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="//zh-cn/docs/demo1.html" target="_self">概览</a></dd><dd><a href="//zh-cn/docs/demo2.html" target="_self">快速开始</a></dd><dd><a href="//zh-cn/docs/dir/demo3.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="//zh-cn/blog/index.html" target="_self">博客</a></dd><dd><a href="//zh-cn/community/index.html" target="_self">社区</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2021 Someone. All rights reserved.</span></div></div></footer></div></div>
+	<script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>
+	<script src="https://f.alicdn.com/react/15.4.1/react-dom.min.js"></script>
+	<script>
+		window.rootPath = '/';
+  </script>
+	<script src="//build/documentation.js"></script>
+</body>
+</html>
