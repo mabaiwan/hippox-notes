@@ -4,67 +4,8 @@ export default {
   port: 8088, // 本地开发服务器的启动端口
   domain: 'www.hippox.cn', // 站点部署域名，无需协议和path等
   defaultSearch: 'baidu', // 默认搜索引擎，baidu或者google
-  defaultLanguage: 'en-us',
+  defaultLanguage: 'zh-cn',
   'en-us': {
-    pageMenu: [
-      {
-        key: 'home', // 用作顶部菜单的选中
-        text: 'HOME',
-        link: '/en-us/index.html',
-      },
-      {
-        key: 'docs',
-        text: 'DOCS',
-        link: '/en-us/docs/demo1.html',
-      },
-      {
-        key: 'blog',
-        text: 'BLOG',
-        link: '/en-us/blog/index.html',
-      },
-      {
-        key: 'community',
-        text: 'COMMUNITY',
-        link: '/en-us/community/index.html',
-      },
-    ],
-    disclaimer: {
-      title: 'Disclaimer',
-      content: 'the disclaimer content',
-    },
-    documentation: {
-      title: 'Documentation',
-      list: [
-        {
-          text: 'Overview',
-          link: '/en-us/docs/demo1.html',
-        },
-        {
-          text: 'Quick start',
-          link: '/en-us/docs/demo2.html',
-        },
-        {
-          text: 'Developer guide',
-          link: '/en-us/docs/dir/demo3.html',
-        },
-      ],
-    },
-    resources: {
-      title: 'Resources',
-      list: [
-        {
-          text: 'Blog',
-          link: '/en-us/blog/index.html',
-        },
-        {
-          text: 'Community',
-          link: '/en-us/community/index.html',
-        },
-      ],
-    },
-    copyright: 'Copyright © 2021 Someone. All rights reserved.',
-  },
-  'zh-cn': {
     pageMenu: [
       {
         key: 'home',
@@ -76,20 +17,20 @@ export default {
         text: '文档',
         link: '/zh-cn/docs/start/什么是Hippo.html',
       },
-      {
-        key: 'blog',
-        text: '博客',
-        link: '/zh-cn/blog/index.html',
-      },
-      {
-        key: 'community',
-        text: '社区',
-        link: '/zh-cn/community/index.html',
-      },
+      // {
+      //   key: 'blog',
+      //   text: '博客',
+      //   link: '/zh-cn/blog/index.html',
+      // },
+      // {
+      //   key: 'community',
+      //   text: '社区',
+      //   link: '/zh-cn/community/index.html',
+      // },
     ],
     disclaimer: {
-      title: '免责声明',
-      content: '免责声明的具体内容',
+      title: '愿景',
+      content: 'Hippo 打造成线程池参数动态配置、监控报警、实时查看等多位一体的强大平台，X 也意味着更多的可能性。',
     },
     documentation: {
       title: '文档',
@@ -118,6 +59,65 @@ export default {
         {
           text: '社区',
           link: '/zh-cn/community/index.html',
+        },
+      ],
+    },
+    copyright: 'Copyright © 2021 Someone. All rights reserved.',
+  },
+  'zh-cn': {
+    pageMenu: [
+      {
+        key: 'home',
+        text: '首页',
+        link: '/zh-cn/index.html',
+      },
+      {
+        key: 'docs',
+        text: '文档',
+        link: '/zh-cn/docs/start/什么是Hippo.html',
+      },
+      // {
+      //   key: 'blog',
+      //   text: '博客',
+      //   link: '/zh-cn/blog/index.html',
+      // },
+      // {
+      //   key: 'community',
+      //   text: '社区',
+      //   link: '/zh-cn/community/index.html',
+      // },
+    ],
+    disclaimer: {
+      title: '愿景',
+      content: 'Hippo 打造成线程池参数动态配置、监控报警、实时查看等多位一体的强大平台，X 也意味着更多的可能性。',
+    },
+    documentation: {
+      title: '文档',
+      list: [
+        {
+          text: '概览',
+          link: '/zh-cn/docs/start/什么是Hippo.html',
+        },
+        {
+          text: '快速开始',
+          link: '/zh-cn/docs/demo/如何运行Demo.html',
+        },
+        {
+          text: '开发者指南',
+          link: '-',
+        },
+      ],
+    },
+    resources: {
+      title: '资源',
+      list: [
+        {
+          text: '博客',
+          link: '-',
+        },
+        {
+          text: '社区',
+          link: '-',
         },
       ],
     },
