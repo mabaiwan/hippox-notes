@@ -21,7 +21,7 @@ export default {
     introduction: {
       title: 'Hippo 功能简介',
       desc: '线程池在业务系统应该都有使用到，帮助业务流程提升效率以及管理线程，多数场景应用于大量的异步任务处理。Hippo 负责封装线程池动态参数调整，扩展线程池监控以及消息报警等功能',
-      img: '/img/custome/动态更新.png',
+      img: '/img/动态更新.jpg',
     },
     features: {
       title: '特性一览',
@@ -52,7 +52,6 @@ export default {
     start: {
       title: '快速开始',
       desc: '部署 Server 端，与 SpringBoot Client 端完成线程池交互',
-      img: '/img/quick_start.png',
       button: {
         text: '阅读更多',
         link: '/zh-cn/docs/start/什么是Hippo.html',
@@ -84,7 +83,7 @@ export default {
     introduction: {
       title: 'Hippo 功能简介',
       desc: '线程池在业务系统应该都有使用到，帮助业务流程提升效率以及管理线程，多数场景应用于大量的异步任务处理。Hippo 负责封装线程池动态参数调整，扩展线程池监控以及消息报警等功能',
-      img: '/img/custome/动态更新.png',
+      img: '/img/动态更新.jpg',
     },
     features: {
       title: '特性一览',
@@ -115,7 +114,6 @@ export default {
     start: {
       title: '快速开始',
       desc: '部署 Server 端，与 SpringBoot Client 端完成线程池交互',
-      img: '/img/quick_start.png',
       button: {
         text: '阅读更多',
         link: '/zh-cn/docs/start/什么是Hippo.html',
