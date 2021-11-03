@@ -60,7 +60,7 @@ export default {
     },
     users: {
       title: '谁在使用 Hippo',
-      desc: <span>开发阶段，暂无用户使用</span>,
+      desc: <span>开发阶段，暂无用户生产环境使用</span>,
       list: [],
     },
   },
@@ -123,7 +123,7 @@ export default {
     },
     users: {
       title: '谁在使用 Hippo',
-      desc: <span>开发阶段，暂无用户使用</span>,
+      desc: <span>开发阶段，暂无用户生产环境使</span>,
       list: [],
     },
   },

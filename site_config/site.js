@@ -30,7 +30,7 @@ export default {
     ],
     disclaimer: {
       title: '愿景',
-      content: 'Hippo 打造成线程池参数动态配置、监控报警、实时查看等多位一体的强大平台，X 也意味着更多的可能性。',
+      content: 'Hippo 的愿景是打造线程池参数动态配置、监控报警、实时查看等多位一体的强大平台，X 也意味着更多的可能性。',
     },
     documentation: {
       title: '文档',
@@ -89,7 +89,7 @@ export default {
     ],
     disclaimer: {
       title: '愿景',
-      content: 'Hippo 打造成线程池参数动态配置、监控报警、实时查看等多位一体的强大平台，X 也意味着更多的可能性。',
+      content: 'Hippo 的愿景是打造线程池参数动态配置、监控报警、实时查看等多位一体的强大平台，X 也意味着更多的可能性。',
     },
     documentation: {
       title: '文档',

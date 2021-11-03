@@ -4,32 +4,32 @@ pages:
   # 首页配置
   zh-cn:
    title: 'HippoX'
-   keywords: '关键词1，关键词2'
-   description: '页面内容简介'
+   keywords: '动态线程池项目'
+   description: '强大的动态线程池，附带监控报警功能'
   # home config
   en-us:
    title: 'HippoX'
-   keywords: 'keyword1,keyword2'
-   description: 'page description'
+   keywords: '动态线程池项目'
+   description: '强大的动态线程池，附带监控报警功能'
  community:
   # 社区页配置
   zh-cn:
    title: 'HippoX'
-   keywords: '关键词1，关键词2'
-   description: '页面内容简介'
+   keywords: '动态线程池项目'
+   description: '强大的动态线程池，附带监控报警功能'
   # community page config
   en-us:
    title: 'HippoX'
-   keywords: 'keyword1,keyword2'
-   description: 'page description'
+   keywords: '动态线程池项目'
+   description: '强大的动态线程池，附带监控报警功能'
  blog:
   # 博客列表页配置
   zh-cn:
    title: 'HippoX'
-   keywords: '关键词1，关键词2'
+   keywords: '动态线程池项目'
    description: '页面内容简介'
   en-us:
    # blog list page config
    title: 'HippoX'
-   keywords: 'keyword1,keyword2'
-   description: 'page description'
+   keywords: '动态线程池项目'
+   description: '强大的动态线程池，附带监控报警功能'
